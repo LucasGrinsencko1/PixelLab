@@ -1,0 +1,257 @@
+
+/* Global settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #141820;
+    color: #F8FAFC;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 8%;
+    border-bottom: 1px solid #2D3542;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h1 {
+    font-size: 26px;
+}
+
+.logo-icon {
+    color: #818CF8;
+    font-size: 32px;
+}
+
+.header p {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+/* Main editor */
+
+.editor {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section {
+    background: #1E2430;
+    border: 1px solid #303849;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #CBD5E1;
+}
+
+/* Toolbar */
+
+.tool-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.tool {
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    background: #303849;
+    color: #CBD5E1;
+}
+
+.tool:hover {
+    background: #414D63;
+}
+
+.tool.active {
+    background: #5865F2;
+    color: white;
+}
+
+/* Drawing canvas */
+
+.canvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.canvas-header span {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+#pixel-canvas {
+    width: min(100%, 480px);
+    aspect-ratio: 1;
+
+    margin: 20px auto 0;
+
+    background: white;
+    border: 1px solid #475569;
+
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
+    overflow: hidden;
+    user-select: none;
+    touch-action: none;
+}
+
+/* Color palette */
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.color:hover {
+    transform: scale(1.1);
+}
+
+.color.selected {
+    outline: 2px solid #818CF8;
+    outline-offset: 3px;
+}
+
+/* Action buttons */
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.actions button {
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    background: #303849;
+    color: white;
+}
+
+#export-btn {
+    background: #5865F2;
+}
+
+.actions button:hover {
+    filter: brightness(1.2);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 24px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .editor {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .tool {
+        flex: 1;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
+
+
+/* Individual pixels */
+
+.pixel {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    cursor: crosshair;
+    min-width: 0;
+    min-height: 0;
+}
+
+
+/* Disabled tools */
+
+.tool:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.tool:disabled:hover {
+    background: #303849;
+}
+
+
+/* Drawing experience */
+
+#pixel-canvas {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pixel {
+    -webkit-user-select: none;
+    user-select: none;
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelLab - Pixel Art Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">✦</span>
+            <h1>PixelLab</h1>
+        </div>
+
+        <p>Create. Pixel by Pixel.</p>
+    </header>
+
+    <main class="editor">
+
+        <!-- Toolbar -->
+        <section class="toolbar">
+            <h2>Tools</h2>
+
+            <div class="tool-buttons">
+                <button class="tool active" id="pencil">
+                    Pencil
+                </button>
+
+                <button class="tool" id="eraser">
+                    Eraser
+                </button>
+
+               
+                <button class="tool" id="fill" disabled title="Coming soon">
+                    Fill (Soon)
+                </button>
+
+                <button class="tool" id="picker" disabled title="Coming soon">
+                    Picker (Soon)
+                </button>
+            </div>
+        </section>
+
+        <!-- Drawing area -->
+        <section class="canvas-container">
+
+            <div class="canvas-header">
+                <h2>Untitled Artwork</h2>
+                <span>16 × 16</span>
+            </div>
+
+            <div id="pixel-canvas"></div>
+
+        </section>
+
+        <!-- Color palette -->
+        <section class="palette">
+            <h2>Color Palette</h2>
+
+            <div class="colors">
+                <button class="color selected" style="background: #5865F2;"></button>
+                <button class="color" style="background: #EF4444;"></button>
+                <button class="color" style="background: #F59E0B;"></button>
+                <button class="color" style="background: #22C55E;"></button>
+                <button class="color" style="background: #0EA5E9;"></button>
+                <button class="color" style="background: #A855F7;"></button>
+                <button class="color" style="background: #111827;"></button>
+                <button class="color" style="background: #FFFFFF;"></button>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="actions">
+            <button id="clear-btn">Clear Canvas</button>
+            <button id="export-btn">Export PNG</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PixelLab © 2026 — Made with creativity.</p>
+    </footer>
+
+</body>
+</html>
