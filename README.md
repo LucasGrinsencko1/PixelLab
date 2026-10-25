@@ -1,11 +1,9 @@
 
 # PixelLab 🎨
 
-A lightweight and interactive pixel art editor built with
-HTML, CSS, and vanilla JavaScript.
+Create. Pixel by Pixel.
 
-Create pixel artwork directly in your browser and export
-your creations as PNG images.
+PixelLab is a lightweight pixel art editor built with HTML, CSS, and vanilla JavaScript. Create your own pixel artwork directly in your browser and export it as a PNG image.
 
 ## Features
 
@@ -22,7 +20,7 @@ your creations as PNG images.
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Canvas API
+- HTML Canvas API (PNG export)
 
 ## Getting Started
 
@@ -42,8 +40,6 @@ No external dependencies are required.
 
 ## Roadmap
 
-Future improvements:
-
 - [ ] Fill tool
 - [ ] Color picker
 - [ ] Undo and redo
@@ -53,8 +49,4 @@ Future improvements:
 
 ## Author
 
-Developed as a personal software development project.
-
-## License
-
-License information will be added before public release.
+Developed by Lucas Grinsencko as a personal software development project.
